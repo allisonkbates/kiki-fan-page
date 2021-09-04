@@ -1,0 +1,124 @@
+/*  How to set the cursor cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto; */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+:root {
+    --flamingo-dark: #F83B5B;
+    --flamingo-medium: #F28EAA;
+    --flamingo-light: #F4D6DB;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    /* cursor: url("./images/flamingo-icon.png"), auto; */
+    /* cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Lobster', cursive;
+    background: url('./images/flamingo-wallpaper-background.jpg') center/cover repeat;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0rem;
+}
+
+.hero-section {
+
+}
+
+header {
+    background-color: var(--flamingo-dark);
+    margin-top: 2rem;
+    width: 100%;
+}
+
+h1 {
+    color: var(--white);
+    text-align: center;
+    padding: 0rem 3rem;
+}
+
+h2, p {
+    color: var(--flamingo-dark);
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--flamingo-light);
+    margin: 2rem;
+    padding: 1rem 1rem 0rem;
+    max-width: 282px;
+    border-radius: 2px;
+}
+
+.card p {
+    max-width: 275px;
+    text-align: center;
+}
+
+.rotate-right {
+    transform: rotate(5deg);
+}
+
+.rotate-left {
+    transform: rotate(-3deg);
+}
+
+.bio-section {
+    background-color: var(--flamingo-light);
+    padding: 2rem 0rem;
+}
+
+.kiki-avatar {
+    border-radius: 100%;
+    border: 1px solid var(--flamingo-dark);
+    border-top-width: 20px;
+    border-left-width: 20px;
+    margin: .5rem 0rem;
+}
+
+.kiki-chicken {
+    border: 1px solid var(--flamingo-dark);
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+    border-radius: 2px;
+    margin: 3rem;
+}
+
+.text-box {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem 0rem;
+    padding: 0rem 1rem;
+    border-radius: 2px;
+    border: 1px solid var(--flamingo-dark);
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+}
+
+
+/* To Dos */
+
+/* 
+1. make the cursor a flamingo
+2. fix the borders around the kiki-chicken image
