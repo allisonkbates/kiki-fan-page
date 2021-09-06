@@ -3,16 +3,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 :root {
-    --flamingo-dark: #F83B5B;
-    --flamingo-medium: #F28EAA;
-    --flamingo-light: #F4D6DB;
+    --primary-dark: #F83B5B;
+    --primary-medium: #F28EAA; /* not currently used */
+    --primary-light: #F4D6DB;
     --white: #ffffff;
+    --theme-cta: #FE8100;
+    --background-image: url("./images/flamingo-wallpaper-background.jpg");
+}
+
+.fall-theme {
+    --primary-dark: #FE8100;
+    --primary-medium: #FE8100;
+    --primary-light: #FFBF73;
+    --white: #ffffff;
+    --theme-cta: #F83B5B;
+    --background-image: url("./images/pumpkin-illustration-pattern.jpg");
 }
 
 * {
     box-sizing: border-box;
 }
-
 
 body {
     /* cursor: url("./images/flamingo-icon.png"), auto; */
@@ -20,7 +30,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lobster', cursive;
-    background: url('./images/flamingo-wallpaper-background.jpg') center/cover repeat;
+    background-image: var(--background-image);
 }
 
 .section {
@@ -31,12 +41,8 @@ body {
     padding: 1rem 0rem;
 }
 
-.hero-section {
-
-}
-
 header {
-    background-color: var(--flamingo-dark);
+    background-color: var(--primary-dark);
     margin-top: 2rem;
     width: 100%;
 }
@@ -48,7 +54,7 @@ h1 {
 }
 
 h2, p {
-    color: var(--flamingo-dark);
+    color: var(--primary-dark);
 }
 
 img {
@@ -58,12 +64,62 @@ img {
     border-radius: 2px;
 }
 
+/* Hero Section Styles */
+.kiki-chicken {
+    border: 10px solid var(--primary-dark);
+    border-radius: 2px;
+    margin: 3rem;
+    /* could be nice to have a white border around the pink border*/
+}
+
+.theme-button {
+    background-color: var(--theme-cta);
+    color: white;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Lobster', cursive;
+    width: 200px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Bio Section Styles */
+.bio-section {
+    background-color: var(--primary-light);
+    padding: 2rem 0rem;
+}
+
+.kiki-avatar {
+    border-radius: 100%;
+    border: 1px solid var(--primary-dark);
+    border-top-width: 20px;
+    border-left-width: 20px;
+    margin: .5rem 0rem;
+}
+
+.text-box {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem 0rem;
+    padding: 0rem 1rem;
+    border-radius: 2px;
+    border: 1px solid var(--primary-dark);
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+}
+
+/* Card Section Styles */
+/* Fix cards so they're the same size & consistent across widths */
+
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--flamingo-light);
+    background-color: var(--primary-light);
     margin: 2rem;
     padding: 1rem 1rem 0rem;
     max-width: 282px;
@@ -83,42 +139,21 @@ img {
     transform: rotate(-3deg);
 }
 
-.bio-section {
-    background-color: var(--flamingo-light);
-    padding: 2rem 0rem;
-}
+/* Footer */
 
-.kiki-avatar {
-    border-radius: 100%;
-    border: 1px solid var(--flamingo-dark);
-    border-top-width: 20px;
-    border-left-width: 20px;
-    margin: .5rem 0rem;
-}
-
-.kiki-chicken {
-    border: 1px solid var(--flamingo-dark);
-    border-right-width: 20px;
-    border-bottom-width: 20px;
-    border-radius: 2px;
-    margin: 3rem;
-}
-
-.text-box {
-    background-color: white;
-    width: 80%;
-    max-width: 600px;
-    margin: 2rem 0rem;
-    padding: 0rem 1rem;
-    border-radius: 2px;
-    border: 1px solid var(--flamingo-dark);
-    border-right-width: 8px;
-    border-bottom-width: 8px;
+footer {
+    height: 50px;
+    background-color: var(--primary-dark); 
 }
 
 
-/* To Dos */
+@media only screen and (min-width: 768px) {
+    .section {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-/* 
-1. make the cursor a flamingo
-2. fix the borders around the kiki-chicken image
+    .bio-section {
+        flex-direction: column;
+    }
+}
